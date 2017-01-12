@@ -2,7 +2,7 @@
 title: The pragmatic developer
 subtitle: Wasting time so you don't
 email: alexandre.rozier.io@gmail.com
-description: A home for pragmatic developers.
+description: Build with Jekyll and Forty theme
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 author:
@@ -11,7 +11,7 @@ city: Nashville
 state: TN
 zip_code: 55555
 country: United States of America
-phone: (716) 555-5555
+phone: It's a secret, shhhhh.
 
 # Homepage tiles
 tiles-source: posts # accepts "posts" or "pages"
@@ -28,3 +28,7 @@ twitter_url: https://twitter.com/YUNoCode
 
 # Build settings
 markdown: kramdown
+
+sass:
+    sass_dir: assets/css
+    style: compressed

@@ -1,10 +1,14 @@
 ---
 layout: home
 title: Home
-landing-title: 'Hi, my name is Forty'
+landing-title: "This is a demonstration static website"
 description: null
 image: null
 author: null
 ---
 
-Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.
+Thank you for visiting this Website. It was built as I was testing [GitHub's pages][pages] combined with Jekyll's custom themes.  
+I found the [forty theme][forty] quite impressive and decided to make some use of it, to build this little yet fully-featured website. Have fun !
+
+[pages]: https://pages.github.com/
+[forty]: https://github.com/andrewbanchich/forty-jekyll-theme
