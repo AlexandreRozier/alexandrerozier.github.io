@@ -3,7 +3,7 @@ layout: post
 title:  "Why you should think about webapps security"
 date:   2017-08-18 9:12:39 +0100
 categories: jekyll update
-image: assets/images/pic08.jpg
+image: assets/images/pic09.jpg
 description: "Take care of users data"
 
 ---
