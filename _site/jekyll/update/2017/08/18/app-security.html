@@ -9,11 +9,19 @@
 <head>
 	<title>The pragmatic developer</title>
 	<meta charset="utf-8" />
+	<meta name="robots" content="all, index, follow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="google-site-verification" content="EyRYoFr7ghFHW3APxj-rr8VJkOMghOUSL1v7jxYHoUA" />
+	
 	<!--[if lte IE 8]><script src="http://localhost:4000/assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css" />
 	<!--[if lte IE 9]><link rel="stylesheet" href="http://localhost:4000/assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="http://localhost:4000/assets/css/ie8.css" /><![endif]-->
+
+	<META NAME="Keywords" CONTENT="jekyll, developer, pragmatic, digital">
+	<META NAME="Author" CONTENT="Alexandre Rozier">
+	<META NAME="Reply-to" CONTENT="alexandre.rozier.io@gmail.com">
+	<META NAME="Identifier-url" CONTENT="https://alexandre.rozier.io">
 </head>
 
 
@@ -24,7 +32,7 @@
 
 <!-- Header -->
 <header id="header">
-	<a href="http://localhost:4000/" class="logo"><strong>The pragmatic developer</strong> <span>Wasting time so you don't</span></a>
+	<a href="http://localhost:4000/" class="logo"><strong>The pragmatic developer</strong> <span>Developing cool things. Sometimes succeeding.</span></a>
 	<nav>
 		<a href="#menu">Menu</a>
 	</nav>
@@ -76,22 +84,27 @@
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h1>Demo post</h1>
+			<h1>Why you should think about webapps security</h1>
 		</header>
-		<span class="image main"><img src="/assets/images/pic06.jpg" alt="" /></span>
-		<p><p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+		<span class="image main"><img src="/assets/images/pic09.jpg" alt="" /></span>
+		<p><p>I have been recently adding a <a href="https://stripe.com">Stripe</a> payment method to an existing website. When dealing with sensitive informations such as credit card data, one should take time to think about the possible security flaws when designing the payment flow.
+Here are the best practices I have been following until now :</p>
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<h3 id="1---never-trust-user-input">1 - Never trust user input</h3>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<p>Stripe proposes a very useful tool called <a href="https://stripe.com/docs/checkout">Checkout</a> : it provides the user with a clean and easy-to-use payment flow, taking care of most of the security steps.
+But, and it’s a bit tricky, one has to provide the Chekout component with the amount of the charge, to tell the customer how much he will have to pay. It is tempting to send this amount from the customer’s browser back to the server, since it’s already ready to use.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<p>But, and this is a real issue, the customer could change this amount (in the chrome console for example) for 0 and pay nothing ! That’s why the server should compute again the price to pay, according to the customer’s consumption.</p>
 
-<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<h3 id="2---https-only-makes-the-developer-happy">2 - HTTPS only makes the developer happy</h3>
+
+<p>The Stripe flow is kinda simple  : the customer provide its credit card informations to the checkout component, which sends them securely to the Stripe API in exchange of a one-time token. The token should then be passed back to our server where it’ll be used to charge the customer. 
+As a consequence, this flow should be fully encrypted to avoid possible man-in-the middle attack. By hijacking the one-time token, an attacker could charge the client with its account and retrieve his money, and you really don’t want that ;)</p>
+
+<h3 id="3---read-the-docs">3 - Read the docs</h3>
+
+<p>When using a framework, there is often a portion dedicated to security : reading it carefully will avoid you serious trouble, as you’ll learn to protect yourself again many commons security flaws (CSRF attacks, sensitive data exposure,…).</p>
 
 </p>
 	</div>
@@ -142,9 +155,9 @@
 				<div class="contact-method">
 					<span class="icon alt fa-home"></span>
 					<h3>Address</h3>
-					<span>1234 Somewhere Road<br />
-					Nashville, TN 55555<br />
-					United States of America</span>
+					<span>Between my desk and my chair<br />
+					Grenoble,  <br />
+					France</span>
 				</div>
 			</section>
 		</section>
@@ -181,7 +194,7 @@
 				
 			</ul>
 			<ul class="copyright">
-				<li>&copy; The pragmatic developer Wasting time so you don't</li>
+				<li>&copy; The pragmatic developer Developing cool things. Sometimes succeeding.</li>
 				<li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
 				<li>Jekyll integration: <a href="http://andrewbanchi.ch" target="_blank">Andrew Banchich</a></li>
 				
@@ -192,6 +205,7 @@
 </div>
 
 <!-- Scripts -->
+	<script src="http://localhost:4000/assets/js/analytics.js"></script>
 	<script src="http://localhost:4000/assets/js/jquery.min.js"></script>
 	<script src="http://localhost:4000/assets/js/jquery.scrolly.min.js"></script>
 	<script src="http://localhost:4000/assets/js/jquery.scrollex.min.js"></script>

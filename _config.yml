@@ -1,17 +1,18 @@
 # Site settings
 title: The pragmatic developer
-subtitle: Wasting time so you don't
+subtitle: Developing cool things. Sometimes succeeding.
 email: alexandre.rozier.io@gmail.com
-description: Build with Jekyll and Forty theme
+description: Built with love, coffee and pain.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 author:
-street_address: 1234 Somewhere Road
-city: Nashville
-state: TN
-zip_code: 55555
-country: United States of America
+street_address: Between my desk and my chair
+city: Grenoble
+state: 
+zip_code: 
+country: France
 phone: It's a secret, shhhhh.
+future: true
 
 # Homepage tiles
 tiles-source: posts # accepts "posts" or "pages"

@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-landing-title: "This is a demonstration static website"
+landing-title: "Welcome ! "
 description: null
 image: null
 author: null
