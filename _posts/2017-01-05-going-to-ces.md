@@ -20,8 +20,7 @@ One could play the last COD with 30ms ping on highest video settings on a $100 l
 
 ### Lumi Disk
 
-Designed by the [Yellow Innovation][yellow] lab, this device is a connected hard-drive allowing user to automatically backup personal media and share them with their 
-family. 
+Designed by the [Yellow Innovation][yellow] lab, this device is a connected hard-drive allowing user to automatically backup personal media and share them with their family. 
 
 
 [liquid]: https://liquidsky.tv/

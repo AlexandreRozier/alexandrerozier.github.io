@@ -1,4 +1,4 @@
-# The Pragmatic Developer - Built with Jekyll
+# (╯°□°）╯︵ ┻━━━┻ - Built with Jekyll
 
 A fork of the Jekyll version of the "Forty" theme by [HTML5 UP](https://html5up.net/). Made to learn jekyll / static websites, and maybe post some content 
 in future iterations. Stay tuned !

@@ -30,6 +30,7 @@
     <!-- Main -->
     <div id="main">
 
+
         <!-- One -->
         {% include tiles.html %}
 
@@ -37,12 +38,21 @@
         <section id="two">
             <div class="inner">
                 <header class="major">
-                    <h2>Welcome to this static website</h2>
+                    <h2>What can I find here ?</h2>
                 </header>
                 <p>{{ content }}</p>
-                
+
             </div>
         </section>
+
+        <!-- Twitter feed <--></-->
+        <section id="three">
+            <div class="inner">
+                {% include twitter-feed.html %}
+            </div>
+        </section>
+
+
 
     </div>
 

@@ -1,6 +1,6 @@
 # Site settings
-title: The pragmatic developer
-subtitle: Developing cool things. Sometimes succeeding.
+title: Tableflip
+subtitle: Developing things, and much more.
 email: alexandre.rozier.io@gmail.com
 description: Built with love, coffee and pain.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -33,3 +33,5 @@ markdown: kramdown
 sass:
     sass_dir: assets/css
     style: compressed
+
+gems: ['jekyll-twitter-plugin']
